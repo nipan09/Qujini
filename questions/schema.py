@@ -40,6 +40,22 @@ class createquestion(graphene.Mutation):
 class MyMutations(graphene.ObjectType):
     create_question= createquestion.Field()
 
+class QuestionNode(DjangoObjectType):
+    class Meta:
+       model= Question
+
+class minmarkNode(DjangoObjectType):
+     class Meta:
+       model= min_mark
+
+class maxmarkNode(DjangoObjectType):
+     class Meta:
+        model= max_mark
+
+class difficultyNode(DjangoObjectType):
+      class Meta:
+         model= difficulty
+
 class TypeNode(DjangoObjectType):
     class Meta:
        model= Type
@@ -47,6 +63,15 @@ class TypeNode(DjangoObjectType):
 class TopicNode(DjangoObjectType):
     class Meta:
        model= Topic 
+
+class dateNode(DjangoObjectType):
+    class Meta:
+        model= date
+
+class authorNode(DjangoObjectType):
+     class Meta:
+         model= author
+
 
 # Writing an app level query
 class Query(graphene.ObjectType):
@@ -59,3 +84,4 @@ class Query(graphene.ObjectType):
     
     def resolve_all_topic(self, info):
        return Topic.objectsall()          
+
