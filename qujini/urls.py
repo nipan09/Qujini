@@ -23,3 +23,5 @@ urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r'',GraphQLView.as_view(graphiql=True)),
 ]
+admin.site.site_title="Qujini"
+
