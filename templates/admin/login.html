@@ -2,7 +2,7 @@
 {% load i18n static %}
 
 {% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/login.css" %}">
-<style>body.login {background-color: #FFFF00;} 
+<style>body.login {background-color: #FFD700;} 
  </style>
 {{ form.media }}
 {% endblock %}
@@ -60,7 +60,7 @@
   </div>
   {% endif %}
   <div class="submit-row">
-    <label>&nbsp;</label><input type="submit" value="{% trans 'Log in' %}">
+    <label>&nbsp;</label><input type="submit" value="{% trans 'Log in' %}" style="background-color: #FFD700; color: #000000"; >
   </div>
 </form>
 
